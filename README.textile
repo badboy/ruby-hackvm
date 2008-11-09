@@ -21,6 +21,7 @@ The call stack is used to push the value of the program counter when jumping to 
 
 h2. Instructions
 
+<pre>
 Instruction		Description
 
 ' '		Do Nothing 
@@ -78,7 +79,7 @@ Instruction		Description
 'd'		Drop S0 
 
 '!'		Terminate the program 
-
+</pre>
 
 
 h2. Examples
