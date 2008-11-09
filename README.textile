@@ -1,0 +1,53 @@
+h1. Ruby Hack VM
+
+h2. Information
+The Hack VM is a tiny, trivial, virtual machine.
+Its purpose is to be used as a simple execution engine that can run very simple programs.
+
+more Information on <a href="http://www.hacker.org/hvm/">http://www.hacker.org/hvm/</a>
+
+The virtual machine executes a single program and terminates, either by reaching the end of the code, an '!' instruction, or because an exception was thrown during execution.
+A program is represented by a string of single-character instructions.
+The virtual machine starts with the first instruction, executes it, and moves on to the next instruction, etc... 
+The index of the current instruction is called the program counter. 
+The execution model is simple: the virtual machine has an operand stack, a memory buffer, and a call stack.
+Each item on the operand stack or in memory is a cell that can hold a signed integer. 
+For implementation reasons, those integers are currently limited to 32 bits, but do not count on it, they could be large in future implementations. 
+The call stack is used to push the value of the program counter when jumping to a routine from which we want to return.
+
+h2. Instructions
+
+|Instruction |Description |
+|' ' |Do Nothing |
+|'p' |Print S0 interpreted as an integer |
+|'P' |Print S0 interpreted as an ASCII character (only the least significant 7 bits of the value are used) |
+|'0' |Push the value 0 on the stack |
+|'1' |Push the value 1 on the stack |
+|'2' |Push the value 2 on the stack |
+|'3' |Push the value 3 on the stack |
+|'4' |Push the value 4 on the stack |
+|'5' |Push the value 5 on the stack |
+|'6' |Push the value 6 on the stack |
+|'7' |Push the value 7 on the stack |
+|'8' |Push the value 8 on the stack |
+|'9' |Push the value 9 on the stack |
+|'+' |Push S1+S0 |
+|'-' |Push S1-S0 |
+|'*' |Push S1*S0 |
+|'/' |Push S1/S0 |
+|':' |Push -1 if S1<S0, 0 if S1=S0, or 1 S1>S0 |
+|'g' |Add S0 to the program counter |
+|'?' |Add S0 to the program counter if S1 is 0 |
+|'c' |Push the program counter on the call stack and set the program counter to S0 |
+|'$' |Set the program counter to the value pop'ed from the call stack |
+|'<' |Push the value of memory cell S0 |
+|'>' |Store S1 into memory cell S0 |
+|'^' |Push a copy of S<S0+1> (ex: 0^ duplicates S0) |
+|'v' |Remove S<S0+1> from the stack and push it on top (ex: 1v swaps S0 and S1) |
+|'d' |Drop S0 |
+|'!' |Terminate the program |
+
+h2. Examples
+
+Input: "78*p" Output: 56
+Input: "123451^2v5:4?9p2g8pppppp" Output: 945321
