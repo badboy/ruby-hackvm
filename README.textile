@@ -11,8 +11,10 @@ more Information on <a href="http://www.hacker.org/hvm/">http://www.hacker.org/h
 The virtual machine executes a single program and terminates, either by reaching the end of the code, an '!' instruction, or because an exception was thrown during execution.
 A program is represented by a string of single-character instructions.
 The virtual machine starts with the first instruction, executes it, and moves on to the next instruction, etc... 
-The index of the current instruction is called the program counter. 
+
+The index of the current instruction is called the program counter.
 The execution model is simple: the virtual machine has an operand stack, a memory buffer, and a call stack.
+
 Each item on the operand stack or in memory is a cell that can hold a signed integer. 
 For implementation reasons, those integers are currently limited to 32 bits, but do not count on it, they could be large in future implementations. 
 The call stack is used to push the value of the program counter when jumping to a routine from which we want to return.
@@ -20,7 +22,7 @@ The call stack is used to push the value of the program counter when jumping to 
 h2. Instructions
 
 |_. Instruction|_. Description|
-|' '|Do Nothing|
+|123|Do Nothing|
 
 h2. Examples
 
