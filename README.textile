@@ -19,7 +19,7 @@ The call stack is used to push the value of the program counter when jumping to 
 
 h2. Instructions
 
-|_. Instruction |_. Description |
+|_. Instruction|_. Description|
 |' '|Do Nothing|
 
 h2. Examples
