@@ -1,7 +1,9 @@
 h1. Ruby Hack VM
 
 h2. Information
-The Hack VM is a tiny, trivial, virtual machine.
+
+h3. The Hack VM is a tiny, trivial, virtual machine.
+
 Its purpose is to be used as a simple execution engine that can run very simple programs.
 
 more Information on <a href="http://www.hacker.org/hvm/">http://www.hacker.org/hvm/</a>
@@ -17,7 +19,7 @@ The call stack is used to push the value of the program counter when jumping to 
 
 h2. Instructions
 
-|_.Instruction |_.Description |
+|_. Instruction |_. Description |
 |' ' |Do Nothing |
 |'p' |Print S0 interpreted as an integer |
 |'P' |Print S0 interpreted as an ASCII character (only the least significant 7 bits of the value are used) |
@@ -50,4 +52,5 @@ h2. Instructions
 h2. Examples
 
 Input: "78*p" Output: 56
+
 Input: "123451^2v5:4?9p2g8pppppp" Output: 945321
