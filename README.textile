@@ -17,7 +17,7 @@ The call stack is used to push the value of the program counter when jumping to 
 
 h2. Instructions
 
-|Instruction |Description |
+|_.Instruction |_.Description |
 |' ' |Do Nothing |
 |'p' |Print S0 interpreted as an integer |
 |'P' |Print S0 interpreted as an ASCII character (only the least significant 7 bits of the value are used) |
