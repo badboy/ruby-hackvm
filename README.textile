@@ -23,61 +23,33 @@ h2. Instructions
 
 <pre>
 Instruction		Description
-
 ' '		Do Nothing 
-
 'p'		Print S0 interpreted as an integer 
-
 'P'		Print S0 interpreted as an ASCII character (only the least significant 7 bits of the value are used) 
-
 '0'		Push the value 0 on the stack 
-
 '1'		Push the value 1 on the stack 
-
 '2'		Push the value 2 on the stack 
-
 '3'		Push the value 3 on the stack 
-
 '4'		Push the value 4 on the stack 
-
 '5'		Push the value 5 on the stack 
-
 '6'		Push the value 6 on the stack 
-
 '7'		Push the value 7 on the stack 
-
 '8'		Push the value 8 on the stack 
-
 '9'		Push the value 9 on the stack 
-
 '+'		Push S1+S0 
-
 '-'		Push S1-S0 
-
 '*'		Push S1*S0 
-
 '/'		Push S1/S0 
-
-':'		Push -1 if S1<S0, 0 if S1=S0, or 1 S1>S0 
-
+':'		Push -1 if S1<S0, 0 if S1=S0, or 1 S1>S0
 'g'		Add S0 to the program counter 
-
 '?'		Add S0 to the program counter if S1 is 0 
-
 'c'		Push the program counter on the call stack and set the program counter to S0 
-
 '$'		Set the program counter to the value pop'ed from the call stack 
-
 '<'		Push the value of memory cell S0 
-
 '>'		Store S1 into memory cell S0 
-
 '^'		Push a copy of S<S0+1> (ex: 0^ duplicates S0) 
-
 'v'		Remove S<S0+1> from the stack and push it on top (ex: 1v swaps S0 and S1) 
-
 'd'		Drop S0 
-
 '!'		Terminate the program 
 </pre>
 
