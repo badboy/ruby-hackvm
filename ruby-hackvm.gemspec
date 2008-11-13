@@ -4,11 +4,13 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["BadBoy_"]
-  s.date = %q{2008-11-11}
+  s.date = %q{2008-11-13}
+  s.default_executable = %q{hackvm.rb}
   s.description = %q{a virtual machine for hackers.}
   s.email = %q{}
-  s.extra_rdoc_files = ["README.textile"]
-  s.files = ["hackvm.rb", "samples/helloworld.hvm", "Rakefile", "README.textile", "Manifest", "ruby-hackvm.gemspec"]
+  s.executables = ["hackvm.rb"]
+  s.extra_rdoc_files = ["bin/hackvm.rb", "README.textile"]
+  s.files = ["samples/helloworld.hvm", "Rakefile", "ruby-hackvm.gemspec", "bin/hackvm.rb", "Manifest", "README.textile"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/BadBoy/ruby-hackvm}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Ruby-hackvm", "--main", "README.textile"]
