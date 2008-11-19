@@ -228,7 +228,7 @@ ARGV.options do |o|
     trace = t
   end
   
-  o.on('-i', '--init FILE', 'init-mem-filename') do |i|
+  o.on('-iFILE', '--init FILE', 'init-mem-filename') do |i|
     f = File.read(i)
     memory = f.chomp.split(',').map{|e|Integer(e)}
   end
