@@ -59,3 +59,4 @@ h2. Examples
 Input: "78*p" Output: 56
 
 Input: "123451^2v5:4?9p2g8pppppp" Output: 945321
+
