@@ -79,12 +79,11 @@ class HackVM
       end
       if OPS[op_code]
         if OPS[op_code].kind_of? Symbol
-          method(OPS[op_code]).call
+          self.send(OPS[op_code])
         elsif OPS[op_code].kind_of? Proc
           OPS[op_code].call
         elsif OPS[op_code].kind_of? Array
-          m = method(OPS[op_code][0])
-          m.call(OPS[op_code][1])
+          self.send(OPS[op_code][0], OPS[op_code][1])
         else
           raise WrongOpCode, "wrong op-code '#{op_code}'"
         end
